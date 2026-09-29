@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       SCALETHRU MEDIA LLC — Single-page marketing site
+       Files: index.html · styles.css · script.js · assets/og-image.png
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SCALETHRU MEDIA | Performance Marketing & E-Commerce Growth Agency</title>
+  <meta name="description" content="SCALETHRU MEDIA is a data-driven performance marketing, creative production, and e-commerce growth agency headquartered in Wilmington, DE. Scale through the noise." />
+  <meta name="author" content="SCALETHRU MEDIA LLC" />
+  <meta name="theme-color" content="#0A0E17" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL: update if the site lives on a different domain -->
+  <link rel="canonical" href="https://scalethrumedia.com/" />
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SCALETHRU MEDIA" />
+  <meta property="og:url" content="https://scalethrumedia.com/" />
+  <meta property="og:title" content="SCALETHRU MEDIA | Scale Through the Noise" />
+  <meta property="og:description" content="Data-driven performance marketing, high-converting creative, and full-funnel e-commerce strategy designed for relentless growth." />
+  <meta property="og:image" content="https://scalethrumedia.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SCALETHRU MEDIA: Scale Through the Noise. Dominate Your Market." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SCALETHRU MEDIA | Scale Through the Noise" />
+  <meta name="twitter:description" content="Data-driven performance marketing, high-converting creative, and full-funnel e-commerce strategy designed for relentless growth." />
+  <meta name="twitter:image" content="https://scalethrumedia.com/assets/og-image.png" />
+
+  <!-- Structured data: local business listing for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://scalethrumedia.com/#organization",
+    "name": "SCALETHRU MEDIA LLC",
+    "alternateName": "SCALETHRU MEDIA",
+    "description": "Premier digital marketing, advertising, performance scaling, and e-commerce growth agency.",
+    "url": "https://scalethrumedia.com/",
+    "image": "https://scalethrumedia.com/assets/og-image.png",
+    "email": "hello@scalethrumedia.com",
+    "telephone": "+1-302-555-0199",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3422 Old Capitol Trail",
+      "addressLocality": "Wilmington",
+      "addressRegion": "DE",
+      "postalCode": "19808-6124",
+      "addressCountry": "US"
+    },
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "Performance Marketing",
+      "Paid Advertising",
+      "Social Media Marketing",
+      "Email and SMS Marketing",
+      "Creative Production",
+      "Web Development",
+      "Conversion Rate Optimization",
+      "E-commerce Growth"
+    ]
+  }
+  </script>
+
+  <!-- Inline SVG favicon (no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300F0FF'/%3E%3Cstop offset='1' stop-color='%2338BDF8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230A0E17'/%3E%3Cpath d='M16 44 L30 28 L38 36 L50 20' stroke='url(%23g)' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Flag JS support early so reveal animations don't flash visible content -->
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Icon sprite: Lucide v0.460.0 (ISC license), only the icons this page uses -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+    <symbol id="i-chart-column" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></symbol>
+    <symbol id="i-chart-line" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="m19 9-5 5-4-4-3 3" /></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+    <symbol id="i-circle-check-big" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></symbol>
+    <symbol id="i-clapperboard" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" /><path d="m6.2 5.3 3.1 3.9" /><path d="m12.4 3.4 3.1 4" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" /><circle cx="12" cy="12" r="10" /></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2" /><rect width="6" height="6" x="9" y="9" rx="1" /><path d="M15 2v2" /><path d="M15 20v2" /><path d="M2 15h2" /><path d="M2 9h2" /><path d="M20 15h2" /><path d="M20 9h2" /><path d="M9 2v2" /><path d="M9 20v2" /></symbol>
+    <symbol id="i-dollar-sign" viewBox="0 0 24 24"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></symbol>
+    <symbol id="i-flask-conical" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" /><path d="M8.5 2h7" /><path d="M7 16h10" /></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /><path d="M15 5.764v15" /><path d="M9 3.236v15" /></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z" /><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" /></symbol>
+    <symbol id="i-message-circle-heart" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7" /></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></symbol>
+    <symbol id="i-search-check" viewBox="0 0 24 24"><path d="m8 11 2 2 4-4" /><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" /></symbol>
+    <symbol id="i-shopping-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></symbol>
+    <symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></symbol>
+    <symbol id="i-twitter" viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" /></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =========================== HEADER =========================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo" aria-label="SCALETHRU MEDIA home">
+        <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trending-up"></use></svg></span>
+        <span class="logo-text">SCALE<span class="gradient-text">THRU</span><span class="logo-media">MEDIA</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-spy="about">About</a></li>
+          <li><a href="#services" class="nav-link" data-spy="services">Services</a></li>
+          <li><a href="#case-studies" class="nav-link" data-spy="case-studies">Case Studies</a></li>
+          <li><a href="#contact" class="nav-link" data-spy="contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+          Book a Free Audit <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
+        </a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="home">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid-overlay" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--purple" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <span class="eyebrow" data-reveal="up">
+          <span class="pulse-dot"></span> Performance Marketing · Creative · E-Commerce Growth
+        </span>
+
+        <h1 class="hero-title" data-reveal="skew" data-delay="100">
+          Scale Through the Noise.<br />
+          <span class="gradient-text gradient-text--animated">Dominate Your Market.</span>
+        </h1>
+
+        <p class="hero-sub" data-reveal="up" data-delay="200">
+          Data-driven performance marketing, high-converting creative production, and full-funnel
+          e-commerce strategy designed for relentless growth.
+        </p>
+
+        <div class="hero-ctas" data-reveal="up" data-delay="300">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            Book a Free Audit <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zap"></use></svg>
+          </a>
+          <a href="#services" class="btn btn-ghost btn-lg">
+            Get Started <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+          </a>
+        </div>
+
+        <!-- Key metrics row -->
+        <div class="stats-row">
+          <div class="stat-card glass-card" data-reveal="scale" data-delay="350">
+            <svg class="icon stat-icon" aria-hidden="true" focusable="false"><use href="#i-dollar-sign"></use></svg>
+            <div class="stat-value">
+              <span class="counter" data-target="45" data-prefix="$" data-suffix="M+">$0M+</span>
+            </div>
+            <p class="stat-label">Client Revenue Generated</p>
+          </div>
+          <div class="stat-card glass-card" data-reveal="scale" data-delay="450">
+            <svg class="icon stat-icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg>
+            <div class="stat-value">
+              <span class="counter" data-target="4.2" data-decimals="1" data-suffix="x">0x</span>
+            </div>
+            <p class="stat-label">Average ROAS</p>
+          </div>
+          <div class="stat-card glass-card" data-reveal="scale" data-delay="550">
+            <svg class="icon stat-icon" aria-hidden="true" focusable="false"><use href="#i-shield-check"></use></svg>
+            <div class="stat-value">
+              <span class="counter" data-target="98.5" data-decimals="1" data-suffix="%">0%</span>
+            </div>
+            <p class="stat-label">Client Retention</p>
+          </div>
+          <div class="stat-card glass-card" data-reveal="scale" data-delay="650">
+            <svg class="icon stat-icon" aria-hidden="true" focusable="false"><use href="#i-rocket"></use></svg>
+            <div class="stat-value">
+              <span class="counter" data-target="150" data-suffix="+">0+</span>
+            </div>
+            <p class="stat-label">Brands Scaled</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============================ ABOUT ============================ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-head" data-reveal="up">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">Built on data. <span class="gradient-text">Driven by velocity.</span></h2>
+          <p class="section-lead">
+            We're a growth partner for ambitious brands. Every dollar we deploy is backed by
+            data, tested relentlessly, and scaled aggressively the moment it proves itself.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <!-- Left: philosophy + HQ badge -->
+          <div class="about-philosophy glass-card" data-reveal="left">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <p class="philosophy-statement">
+              Growth isn't luck. It's a <span class="text-cyan">system</span> of fast experiments,
+              ruthless measurement, and <span class="text-coral">aggressive reinvestment</span> in what works.
+            </p>
+            <p class="philosophy-body">
+              SCALETHRU MEDIA was founded to close the gap between creative ambition and measurable
+              revenue. We blend performance media buying, conversion-focused creative, and lifecycle
+              strategy into a single growth engine. That means no silos, no vanity metrics, and no guesswork.
+            </p>
+
+            <div class="hq-badge">
+              <span class="hq-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"></use></svg></span>
+              <div>
+                <span class="hq-label">Headquarters</span>
+                <strong>Wilmington, Delaware · USA</strong>
+                <span class="hq-sub">Serving brands nationwide &amp; globally</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: key pillars (informational, not clickable) -->
+          <div class="pillars-grid">
+            <article class="pillar-card glass-card" data-reveal="rotate" data-delay="0">
+              <span class="pillar-icon icon-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chart-column"></use></svg></span>
+              <h3>Data-First Decisions</h3>
+              <p>Server-side tracking, clean attribution, and daily performance reads. Budgets follow evidence.</p>
+            </article>
+            <article class="pillar-card glass-card" data-reveal="rotate" data-delay="100">
+              <span class="pillar-icon icon-coral"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-flame"></use></svg></span>
+              <h3>Aggressive Media Buying</h3>
+              <p>Rapid creative testing and confident scaling across Meta, Google, TikTok &amp; programmatic.</p>
+            </article>
+            <article class="pillar-card glass-card" data-reveal="rotate" data-delay="200">
+              <span class="pillar-icon icon-purple"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg></span>
+              <h3>Creative Velocity</h3>
+              <p>A constant stream of thumb-stopping ads, UGC, and landing pages built to convert.</p>
+            </article>
+            <article class="pillar-card glass-card" data-reveal="rotate" data-delay="300">
+              <span class="pillar-icon icon-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-layers"></use></svg></span>
+              <h3>Full-Funnel Scaling</h3>
+              <p>From first impression to repeat purchase, every stage is engineered to raise lifetime value.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== SERVICES =========================== -->
+    <section class="section services" id="services">
+      <div class="section-bg-grid" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head" data-reveal="up">
+          <span class="section-tag">Our Services</span>
+          <h2 class="section-title">One team. <span class="gradient-text">Every growth lever.</span></h2>
+          <p class="section-lead">
+            Four integrated disciplines working as a single engine, so your media, creative, and
+            strategy all compound instead of competing.
+          </p>
+        </header>
+
+        <!-- Each card links to the contact form with its service pre-selected (data-service) -->
+        <div class="services-grid">
+          <article class="service-card glass-card interactive-card" data-reveal="up" data-delay="0">
+            <span class="service-num">01</span>
+            <span class="service-icon icon-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-megaphone"></use></svg></span>
+            <h3>Paid Advertising &amp; Performance Marketing</h3>
+            <p>Online ad campaign management engineered for profitable scale across every major channel.</p>
+            <ul class="service-list">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Meta (Facebook &amp; Instagram) Ads</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Google Search, Shopping &amp; YouTube</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> TikTok Ads &amp; Spark Ads</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Programmatic media buying</li>
+            </ul>
+            <a href="#contact" class="card-link stretched-link" data-service="paid-ads">
+              Get a paid media audit <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </article>
+
+          <article class="service-card glass-card interactive-card" data-reveal="up" data-delay="100">
+            <span class="service-num">02</span>
+            <span class="service-icon icon-purple"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message-circle-heart"></use></svg></span>
+            <h3>Social Media &amp; Lifecycle Marketing</h3>
+            <p>Build community, deepen engagement, and turn one-time buyers into loyal repeat customers.</p>
+            <ul class="service-list">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Complete social media management</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Organic content &amp; engagement</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> High-converting email flows</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> SMS lifecycle marketing</li>
+            </ul>
+            <a href="#contact" class="card-link stretched-link" data-service="social-lifecycle">
+              Grow my social &amp; lifecycle <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </article>
+
+          <article class="service-card glass-card interactive-card" data-reveal="up" data-delay="200">
+            <span class="service-num">03</span>
+            <span class="service-icon icon-coral"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clapperboard"></use></svg></span>
+            <h3>Creative Production &amp; Web Development</h3>
+            <p>Creative that stops the scroll and storefronts that close the sale.</p>
+            <ul class="service-list">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> High-converting ad creatives</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Video ads &amp; UGC production</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Custom website design</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> E-commerce platform optimization</li>
+            </ul>
+            <a href="#contact" class="card-link stretched-link" data-service="creative-web">
+              Start a creative project <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </article>
+
+          <article class="service-card glass-card interactive-card" data-reveal="up" data-delay="300">
+            <span class="service-num">04</span>
+            <span class="service-icon icon-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg></span>
+            <h3>Growth Strategy &amp; Business Consulting</h3>
+            <p>The strategic backbone that connects every channel to real business outcomes.</p>
+            <ul class="service-list">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Full-funnel business consulting</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> CRO (conversion rate optimization)</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> E-commerce sales growth</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> Attribution &amp; scaling strategy</li>
+            </ul>
+            <a href="#contact" class="card-link stretched-link" data-service="growth-strategy">
+              Book a strategy session <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HOW WE WORK ========================= -->
+    <!-- data-spy-parent keeps "Services" highlighted in the nav while this section is in view -->
+    <section class="section process" id="process" data-spy-parent="services">
+      <div class="container">
+        <header class="section-head" data-reveal="up">
+          <span class="section-tag">How We Work</span>
+          <h2 class="section-title">From audit to <span class="gradient-text">scale in four steps.</span></h2>
+          <p class="section-lead">
+            No mystery retainers or six-month "discovery" phases. Here's exactly what happens after
+            you book your free audit.
+          </p>
+        </header>
+
+        <ol class="process-steps">
+          <li class="process-step" data-reveal="up" data-delay="0">
+            <span class="step-marker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search-check"></use></svg></span>
+            <span class="step-time">Week 1</span>
+            <h3><span class="step-num">01</span> Free Growth Audit</h3>
+            <p>We dig into your ad accounts, tracking, creative, and funnel to pinpoint wasted spend and untapped upside.</p>
+          </li>
+          <li class="process-step" data-reveal="up" data-delay="120">
+            <span class="step-marker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map"></use></svg></span>
+            <span class="step-time">Week 2</span>
+            <h3><span class="step-num">02</span> 90-Day Roadmap</h3>
+            <p>You get a prioritized plan covering channels, budgets, creative angles, and the KPI targets we'll hold ourselves to.</p>
+          </li>
+          <li class="process-step" data-reveal="up" data-delay="240">
+            <span class="step-marker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-flask-conical"></use></svg></span>
+            <span class="step-time">Weeks 3–6</span>
+            <h3><span class="step-num">03</span> Launch &amp; Test</h3>
+            <p>Clean tracking goes live and we run rapid creative, audience, and offer tests to find your winners fast.</p>
+          </li>
+          <li class="process-step" data-reveal="up" data-delay="360">
+            <span class="step-marker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trending-up"></use></svg></span>
+            <span class="step-time">Ongoing</span>
+            <h3><span class="step-num">04</span> Scale Winners</h3>
+            <p>Budget moves aggressively into what works, backed by weekly reporting and continuous optimization.</p>
+          </li>
+        </ol>
+
+        <div class="process-cta" data-reveal="up">
+          <p>Step one costs nothing.</p>
+          <a href="#contact" class="btn btn-primary">Start with a Free Audit <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CASE STUDIES ========================= -->
+    <section class="section cases" id="case-studies">
+      <div class="container">
+        <header class="section-head" data-reveal="up">
+          <span class="section-tag">Case Studies</span>
+          <h2 class="section-title">Proof, <span class="gradient-text">not promises.</span></h2>
+          <p class="section-lead">
+            A snapshot of what happens when data, creative, and aggressive execution work together.
+            Open any card for the full breakdown.
+          </p>
+        </header>
+
+        <!-- Each card opens #caseDialog with the matching <template> below -->
+        <div class="cases-grid">
+          <!-- Case 1 -->
+          <article class="case-card glass-card interactive-card" data-reveal="skew" data-delay="0">
+            <div class="case-top">
+              <span class="case-tag tag-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shopping-bag"></use></svg> E-Commerce Brand</span>
+              <span class="case-duration">6 months</span>
+            </div>
+            <h3>Scaled DTC Brand from $50k to $650k/mo in 6 Months</h3>
+            <p>Rebuilt account structure, launched a weekly creative testing sprint, and scaled winners across Meta and Google Shopping.</p>
+
+            <!-- Mini growth chart (bars animate on reveal) -->
+            <div class="case-chart" aria-hidden="true">
+              <span style="--h:12%"></span><span style="--h:20%"></span><span style="--h:34%"></span>
+              <span style="--h:48%"></span><span style="--h:70%"></span><span style="--h:100%"></span>
+            </div>
+
+            <div class="case-metrics">
+              <div><strong class="text-cyan">13x</strong><span>Monthly Revenue</span></div>
+              <div><strong class="text-cyan">4.8x</strong><span>ROAS</span></div>
+            </div>
+
+            <button type="button" class="card-link stretched-link" data-case="case-dtc" aria-haspopup="dialog">
+              View full case study <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </button>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-card glass-card interactive-card case-card--featured" data-reveal="skew" data-delay="120">
+            <div class="case-top">
+              <span class="case-tag tag-purple"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cpu"></use></svg> SaaS / Digital</span>
+              <span class="case-duration">Omnichannel</span>
+            </div>
+            <h3>320% Increase in Qualified Leads with Omnichannel Strategy</h3>
+            <p>Unified LinkedIn, Google, and Meta with retargeting sequences and a rebuilt demo funnel to lift lead quality at scale.</p>
+
+            <div class="case-chart case-chart--purple" aria-hidden="true">
+              <span style="--h:22%"></span><span style="--h:28%"></span><span style="--h:40%"></span>
+              <span style="--h:58%"></span><span style="--h:76%"></span><span style="--h:96%"></span>
+            </div>
+
+            <div class="case-metrics">
+              <div><strong class="text-purple">+320%</strong><span>Qualified Leads</span></div>
+              <div><strong class="text-purple">-41%</strong><span>Cost per Lead</span></div>
+            </div>
+
+            <button type="button" class="card-link stretched-link" data-case="case-saas" aria-haspopup="dialog">
+              View full case study <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </button>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-card glass-card interactive-card" data-reveal="skew" data-delay="240">
+            <div class="case-top">
+              <span class="case-tag tag-coral"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shirt"></use></svg> Fashion Brand</span>
+              <span class="case-duration">Redesign + CRM</span>
+            </div>
+            <h3>Complete E-commerce Redesign &amp; Lifecycle Email Funnel Optimization</h3>
+            <p>Launched a conversion-first storefront and rebuilt welcome, abandoned-cart, and win-back flows from the ground up.</p>
+
+            <div class="case-chart case-chart--coral" aria-hidden="true">
+              <span style="--h:30%"></span><span style="--h:36%"></span><span style="--h:52%"></span>
+              <span style="--h:60%"></span><span style="--h:82%"></span><span style="--h:94%"></span>
+            </div>
+
+            <div class="case-metrics">
+              <div><strong class="text-coral">+87%</strong><span>Conversion Rate</span></div>
+              <div><strong class="text-coral">38%</strong><span>Revenue from Email</span></div>
+            </div>
+
+            <button type="button" class="card-link stretched-link" data-case="case-fashion" aria-haspopup="dialog">
+              View full case study <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </button>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---------- Case study detail content (rendered into the dialog) ---------- -->
+      <template id="case-dtc">
+        <div class="cd-head" data-accent="cyan">
+          <span class="case-tag tag-cyan"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shopping-bag"></use></svg> E-Commerce Brand · 6 months</span>
+          <h2 id="caseDialogTitle">Scaled DTC Brand from $50k to $650k/mo in 6 Months</h2>
+        </div>
+        <div class="cd-metrics">
+          <div><strong>$650k</strong><span>Monthly revenue (from $50k)</span></div>
+          <div><strong>4.8x</strong><span>Blended ROAS</span></div>
+          <div><strong>-38%</strong><span>Cost per acquisition</span></div>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg> The Challenge</h3>
+          <p>A fast-growing home goods brand had stalled at $50k/month. Their Meta account was fragmented into dozens of small ad sets, creative hadn't been refreshed in months, and broken pixel tracking meant nobody trusted the numbers enough to raise budgets.</p>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg> The Strategy</h3>
+          <ul>
+            <li>Rebuilt tracking with server-side Conversions API and consolidated the account into a simple testing → scaling structure.</li>
+            <li>Launched a weekly creative sprint producing 15+ new ads per week across UGC, founder-led, and static formats.</li>
+            <li>Expanded into Google Shopping and Performance Max once Meta winners were proven.</li>
+            <li>Scaled budgets 20–30% every few days on ad sets holding target ROAS.</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg> The Results</h3>
+          <ul>
+            <li>Monthly revenue grew 13x, from $50k to $650k, in six months.</li>
+            <li>Blended ROAS held at 4.8x while ad spend grew more than 10x.</li>
+            <li>Customer acquisition cost fell 38% thanks to a steady supply of fresh winning creative.</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-service="paid-ads">Get results like these <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+      </template>
+
+      <template id="case-saas">
+        <div class="cd-head" data-accent="purple">
+          <span class="case-tag tag-purple"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cpu"></use></svg> SaaS / Digital · Omnichannel</span>
+          <h2 id="caseDialogTitle">320% Increase in Qualified Leads with Omnichannel Strategy</h2>
+        </div>
+        <div class="cd-metrics">
+          <div><strong>+320%</strong><span>Sales-qualified leads</span></div>
+          <div><strong>-41%</strong><span>Cost per lead</span></div>
+          <div><strong>2.6x</strong><span>Demo-to-close pipeline</span></div>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg> The Challenge</h3>
+          <p>A B2B SaaS platform was generating plenty of form fills, but most were unqualified. Channels ran in silos, retargeting was non-existent, and the sales team was burning hours on leads that never converted.</p>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg> The Strategy</h3>
+          <ul>
+            <li>Unified LinkedIn, Google Search, and Meta under one audience and messaging framework.</li>
+            <li>Built multi-touch retargeting sequences with case studies, product demos, and comparison content.</li>
+            <li>Rebuilt the demo funnel with qualifying questions and a streamlined booking flow.</li>
+            <li>Fed CRM lead-quality data back into ad platforms to optimize for pipeline, not just form fills.</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg> The Results</h3>
+          <ul>
+            <li>Qualified leads increased 320% quarter over quarter.</li>
+            <li>Cost per lead dropped 41% even as volume scaled.</li>
+            <li>Sales pipeline from paid channels grew 2.6x.</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-service="growth-strategy">Get results like these <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+      </template>
+
+      <template id="case-fashion">
+        <div class="cd-head" data-accent="coral">
+          <span class="case-tag tag-coral"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shirt"></use></svg> Fashion Brand · Redesign + CRM</span>
+          <h2 id="caseDialogTitle">Complete E-commerce Redesign &amp; Lifecycle Email Funnel Optimization</h2>
+        </div>
+        <div class="cd-metrics">
+          <div><strong>+87%</strong><span>Site conversion rate</span></div>
+          <div><strong>38%</strong><span>Revenue from email &amp; SMS</span></div>
+          <div><strong>+52%</strong><span>Repeat purchase rate</span></div>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg> The Challenge</h3>
+          <p>An independent fashion label had strong social traffic but a slow, dated storefront that leaked sales on mobile. Email was limited to occasional promo blasts, leaving repeat revenue on the table.</p>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg> The Strategy</h3>
+          <ul>
+            <li>Designed and launched a mobile-first storefront with faster load times and a simplified checkout.</li>
+            <li>Rebuilt product pages around social proof, fit guidance, and bundle offers.</li>
+            <li>Created welcome, browse-abandon, abandoned-cart, post-purchase, and win-back flows across email and SMS.</li>
+            <li>Segmented campaigns by purchase behavior instead of sending one blast to everyone.</li>
+          </ul>
+        </div>
+        <div class="cd-block">
+          <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trophy"></use></svg> The Results</h3>
+          <ul>
+            <li>Site conversion rate rose 87% after the redesign launched.</li>
+            <li>Email and SMS grew to 38% of total store revenue.</li>
+            <li>Repeat purchase rate increased 52% within four months.</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn btn-primary" data-service="creative-web">Get results like these <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+      </template>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro" data-reveal="left">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Ready to Scale <span class="gradient-text">Your Revenue?</span></h2>
+          <p class="section-lead">
+            Get a free, no-obligation audit of your ad accounts, funnel, and creative. We'll show you
+            exactly where the next stage of growth is hiding.
+          </p>
+
+          <ul class="contact-points">
+            <li><span class="cp-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search-check"></use></svg></span> Full ad account &amp; tracking audit</li>
+            <li><span class="cp-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chart-line"></use></svg></span> Custom 90-day growth roadmap</li>
+            <li><span class="cp-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg></span> Response within 1 business day</li>
+          </ul>
+
+          <div class="contact-direct">
+            <a href="mailto:hello@scalethrumedia.com"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg> hello@scalethrumedia.com</a>
+            <a href="tel:+13025550199"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> +1 (302) 555-0199</a>
+          </div>
+        </div>
+
+        <div class="form-card glass-card" data-reveal="scale" data-delay="150">
+          <div class="form-glow" aria-hidden="true"></div>
+
+          <form class="audit-form" id="auditForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" autocomplete="name" required />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="email">Business Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="website">Company Website</label>
+                <input type="url" id="website" name="website" placeholder="https://yourbrand.com" autocomplete="url" />
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="adSpend">Monthly Ad Spend</label>
+                <div class="select-wrap">
+                  <select id="adSpend" name="adSpend" required>
+                    <option value="" disabled selected>Select a range</option>
+                    <option value="< $5,000">&lt; $5,000</option>
+                    <option value="$5,000 - $20,000">$5,000 - $20,000</option>
+                    <option value="$20,000 - $50,000">$20,000 - $50,000</option>
+                    <option value="$50,000+">$50,000+</option>
+                  </select>
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
+                </div>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Pre-selected by the service cards / case study CTAs via data-service -->
+            <div class="field" id="serviceField">
+              <label for="service">Service of Interest</label>
+              <div class="select-wrap">
+                <select id="service" name="service">
+                  <option value="not-sure" selected>Not sure yet: recommend a plan</option>
+                  <option value="paid-ads">Paid Advertising &amp; Performance Marketing</option>
+                  <option value="social-lifecycle">Social Media &amp; Lifecycle Marketing</option>
+                  <option value="creative-web">Creative Production &amp; Web Development</option>
+                  <option value="growth-strategy">Growth Strategy &amp; Business Consulting</option>
+                </select>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message / Project Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your brand, goals, and current challenges..." required></textarea>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-submit" id="submitBtn">
+              <span class="btn-label">Book My Free Audit</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+              <svg class="icon btn-icon" aria-hidden="true" focusable="false"><use href="#i-send"></use></svg>
+            </button>
+
+            <p class="form-note">
+              Submitting opens your email app with your details pre-filled. Just hit send.
+            </p>
+          </form>
+
+          <!-- Success state (shown by JS) -->
+          <div class="form-success" id="formSuccess" hidden>
+            <span class="success-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-circle-check-big"></use></svg></span>
+            <h3>You're one click away!</h3>
+            <p>
+              Your email app should now be open with your audit request ready to go. Hit
+              <strong>send</strong> and our team will reply within 1 business day.
+            </p>
+            <p class="success-fallback">
+              Didn't open? Email us directly at
+              <a href="mailto:hello@scalethrumedia.com">hello@scalethrumedia.com</a>.
+            </p>
+            <button type="button" class="btn btn-ghost btn-sm" id="formReset">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="footer-line" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="SCALETHRU MEDIA home">
+          <span class="logo-mark" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-trending-up"></use></svg></span>
+          <span class="logo-text">SCALE<span class="gradient-text">THRU</span><span class="logo-media">MEDIA</span></span>
+        </a>
+        <p>
+          Premier digital marketing, advertising, performance scaling, and e-commerce growth agency
+          helping modern brands scale through the noise.
+        </p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn" class="social-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a>
+          <a href="#" aria-label="Instagram" class="social-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg></a>
+          <a href="#" aria-label="Facebook" class="social-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-facebook"></use></svg></a>
+          <a href="#" aria-label="X (Twitter)" class="social-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-twitter"></use></svg></a>
+          <a href="#" aria-label="YouTube" class="social-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-youtube"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#contact" data-service="paid-ads">Paid Advertising</a></li>
+          <li><a href="#contact" data-service="social-lifecycle">Social &amp; Lifecycle</a></li>
+          <li><a href="#contact" data-service="creative-web">Creative &amp; Web</a></li>
+          <li><a href="#contact" data-service="growth-strategy">Growth Consulting</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <address>
+          <p><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"></use></svg> <span>3422 Old Capitol Trail,<br />Wilmington, DE 19808-6124, USA</span></p>
+          <p><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg> <a href="mailto:hello@scalethrumedia.com">hello@scalethrumedia.com</a></p>
+          <p><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg> <a href="tel:+13025550199">+1 (302) 555-0199</a></p>
+        </address>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SCALETHRU MEDIA LLC. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top">Back to top <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up"></use></svg></a>
+    </div>
+  </footer>
+
+  <!-- ===================== MOBILE STICKY CTA ===================== -->
+  <!-- Shown by script.js on small screens once the hero is out of view -->
+  <div class="mobile-cta" id="mobileCta" aria-hidden="true">
+    <div class="mobile-cta-text">
+      <strong>Free Growth Audit</strong>
+      <span>Reply within 1 business day</span>
+    </div>
+    <a href="#contact" class="btn btn-primary btn-sm" tabindex="-1">Book Now <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-zap"></use></svg></a>
+  </div>
+
+  <!-- ===================== CASE STUDY DIALOG ===================== -->
+  <dialog class="case-dialog" id="caseDialog" aria-labelledby="caseDialogTitle">
+    <button type="button" class="dialog-close" id="caseDialogClose" aria-label="Close case study">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"></use></svg>
+    </button>
+    <div class="dialog-body" id="caseDialogBody"></div>
+  </dialog>
+</body>
+</html>
